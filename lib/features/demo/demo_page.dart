@@ -12,8 +12,8 @@ import 'package:insurance_app/features/demo/widgets/user_info_widget.dart';
 import 'package:insurance_app/repositories/demo_repository.dart';
 import 'package:insurance_app/services/location_service.dart';
 
-class WeatherPage extends StatelessWidget {
-  const WeatherPage({Key? key}) : super(key: key);
+class DemoPage extends StatelessWidget {
+  const DemoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class WeatherPage extends StatelessWidget {
 }
 
 class WeatherView extends StatelessWidget {
-  const WeatherView({Key? key}) : super(key: key);
+  const WeatherView({super.key});
 
   @override
   Widget build(BuildContext context) {

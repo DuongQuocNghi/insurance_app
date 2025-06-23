@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:geolocator_platform_interface/src/models/position.dart';
 import 'package:insurance_app/app/config/app_config.dart';
 import 'package:insurance_app/app/config/font_config.dart';
-import 'package:insurance_app/src/models/random_user_output.dart';
+import 'package:insurance_app/src/models/random_user_response.dart';
 
 class InfoWidget extends StatelessWidget {
   final Info? info;

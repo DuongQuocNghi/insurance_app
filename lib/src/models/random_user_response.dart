@@ -1,14 +1,14 @@
-class RandomUserOutput {
+class RandomUserResponse {
   final List<UserInfo>? results;
   final Info? info;
 
-  RandomUserOutput({
+  RandomUserResponse({
     this.results,
     this.info,
   });
 
-  factory RandomUserOutput.fromJson(Map<String, dynamic> json) {
-    return RandomUserOutput(
+  factory RandomUserResponse.fromJson(Map<String, dynamic> json) {
+    return RandomUserResponse(
         results: json['results'] == null ? null 
             : (json['results'] as List).map((item) => UserInfo.fromJson(item)).toList(),
         info: json['info'] == null ? null : Info.fromJson(json['info']),

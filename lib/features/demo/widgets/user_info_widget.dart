@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:insurance_app/app/config/font_config.dart';
-import 'package:insurance_app/src/models/random_user_output.dart';
+import 'package:insurance_app/src/models/random_user_response.dart';
 import 'package:insurance_app/app/config/app_config.dart';
 
 class UserInfoWidget extends StatelessWidget {

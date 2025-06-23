@@ -3,7 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:go_router/go_router.dart';
 import 'package:insurance_app/app/config/language_config.dart';
 import 'package:insurance_app/app/di/injection_container.dart' as di;
-import 'package:insurance_app/features/demo/demo_page.dart';
+import 'package:insurance_app/features/login/login_screen.dart';
 import 'package:insurance_app/src/generated/i18n/app_localizations.dart';
 import 'package:insurance_app/app/config/app_config.dart';
 import 'package:insurance_app/app/config/font_config.dart';
@@ -37,6 +37,6 @@ void main() async {
 
 /// This handles deepLink.
 final router = GoRouter(
-  errorBuilder: (_, __) => const WeatherPage(),
-  routes: [GoRoute(path: '/', builder: (_, __) => const WeatherPage())],
+  errorBuilder: (_, __) => const LoginScreen(),
+  routes: [GoRoute(path: '/', builder: (_, __) => const LoginScreen())],
 );

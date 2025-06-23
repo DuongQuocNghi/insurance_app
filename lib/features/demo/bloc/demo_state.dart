@@ -1,12 +1,12 @@
 import 'package:equatable/equatable.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:insurance_app/src/models/random_user_output.dart';
+import 'package:insurance_app/src/models/random_user_response.dart';
 
 enum DemoStatus { initial, loading, success, failure }
 
 class DemoState extends Equatable {
   final DemoStatus status;
-  final RandomUserOutput? user;
+  final RandomUserResponse? user;
   final String? errorMessage;
   final Position? currentLocation;
 
@@ -19,7 +19,7 @@ class DemoState extends Equatable {
 
   DemoState copyWith({
     DemoStatus? status,
-    RandomUserOutput? user,
+    RandomUserResponse? user,
     String? errorMessage,
     Position? currentLocation,
   }) {

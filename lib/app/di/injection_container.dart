@@ -6,6 +6,8 @@ import 'package:insurance_app/repositories/demo_repository.dart';
 import 'package:insurance_app/services/local_storage_service.dart';
 import 'package:insurance_app/services/location_service.dart';
 import 'package:insurance_app/services/demo_service.dart';
+import 'package:insurance_app/services/auth_service.dart';
+import 'package:insurance_app/repositories/auth_repository.dart';
 
 /// Singleton instance của GetIt
 final sl = GetIt.instance;
@@ -27,10 +29,16 @@ class DependencyInjection {
     sl.registerLazySingleton<LocalStorageService>(
       () => SharedPrefsStorage(sl<SharedPreferences>()),
     );
+    sl.registerLazySingleton<AuthService>(
+      () => AuthServiceImp(client: sl<http.Client>()),
+    );
 
     // Repositories
     sl.registerLazySingleton<DemoRepository>(
       () => DemoRepositoryImp(weatherService: sl<DemoService>()),
+    );
+    sl.registerLazySingleton<AuthRepository>(
+      () => AuthRepository(sl<AuthService>()),
     );
 
     // Config
