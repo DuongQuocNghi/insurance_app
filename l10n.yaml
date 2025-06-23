@@ -1,0 +1,7 @@
+arb-dir: lib/i18n
+output-dir: lib/src/generated/i18n
+template-arb-file: app_vi.arb
+output-localization-file: app_localizations.dart
+use-escaping: true
+synthetic-package: false
+untranslated-messages-file: untranslated_messages.json

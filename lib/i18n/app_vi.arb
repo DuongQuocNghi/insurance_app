@@ -1,0 +1,7 @@
+{
+  "language_app": "Tiếng Việt",
+  "location_permission_denied": "Quyền truy cập vị trí bị từ chối.",
+  "location_permission_denied_forever": "Quyền truy cập vị trí bị từ chối vĩnh viễn, không thể yêu cầu quyền.",
+  "location_service_disabled": "Dịch vụ vị trí bị tắt. Vui lòng bật lại.",
+  "retry": "Thử lại"
+}

@@ -1,0 +1,7 @@
+{
+  "language_app": "English",
+  "location_permission_denied": "Location permissions are denied.",
+  "location_permission_denied_forever": "Location permissions are permanently denied, we cannot request permissions.",
+  "location_service_disabled": "Location services are disabled. Please enable them.",
+  "retry": "Retry"
+}
