@@ -1,3 +1,4 @@
+import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:insurance_app/repositories/auth_repository.dart';
@@ -8,7 +9,7 @@ part 'login_state.dart';
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final AuthRepository repository;
   LoginBloc({required this.repository}) : super(LoginState()) {
-    on<LoginSubmitted>(_onLoginSubmitted);
+    on<LoginSubmitted>(_onLoginSubmitted, transformer: droppable());
   }
 
   Future<void> _onLoginSubmitted(

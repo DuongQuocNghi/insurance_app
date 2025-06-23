@@ -7,10 +7,10 @@ import 'package:insurance_app/repositories/demo_repository.dart';
 import 'package:insurance_app/services/location_service.dart';
 
 class DemoBloc extends Bloc<DemoEvent, DemoState> {
-  final DemoRepository weatherRepository;
+  final DemoRepository demoRepository;
   final LocationService locationService;
 
-  DemoBloc({required this.weatherRepository, required this.locationService})
+  DemoBloc({required this.demoRepository, required this.locationService})
     : super(const DemoState()) {
     on<UserFetched>(_onUserFetched, transformer: droppable());
   }
@@ -25,7 +25,7 @@ class DemoBloc extends Bloc<DemoEvent, DemoState> {
 
     try {
       final Position position = await locationService.getCurrentLocation();
-      final user = await weatherRepository.getRandomUser();
+      final user = await demoRepository.getRandomUser();
 
       emit(state.copyWith(status: DemoStatus.success, user: user, currentLocation: position));
     } catch (e) {
